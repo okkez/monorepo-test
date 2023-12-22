@@ -1,0 +1,8 @@
+source "https://rubygems.org"
+
+gem "capistrano"
+gem "capistrano-dockerbuild"
+gem "ecs_deploy", github: "reproio/ecs_deploy"
+gem "ed25519"
+gem "bcrypt_pbkdf"
+gem "nokogiri"
