@@ -17,7 +17,7 @@
     },
     {
       "customType": "regex",
-      "fileMatch": ["config/deploy.rb"],
+      "fileMatch": [".*/config/deploy.rb"],
       "matchStrings": [
         "lock '(?<currentValue>\\d+\\.\\d+\\.\\d+)'",
         "lock \"(~>\\s*)?(?<currentValue>\\d+\\.\\d+\\.\\d+)\"",
