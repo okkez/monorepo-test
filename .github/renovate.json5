@@ -2,5 +2,29 @@
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
     "config:recommended"
-  ]
+  ],
+  "timezone": "Asia/Tokyo",
+  "schedule": "before 5am on Thursday",
+  "labels": ["renovate"],
+  "customManagers": [
+    {
+      "customType": "regex",
+      "fileMatch": ["^test3/config/deploy.rb$"],
+      "matchStrings": ["^set :akhq_version, '(?<currentValue>\\d+\\.\\d+\\.\\d+)'\\n"],
+      "datasourceTemplate": "github-releases",
+      "depNameTemplate": "tchiotludo/akhq",
+      "extractVersionTemplate": "^(?<version>.+)$",
+    },
+    {
+      "customType": "regex",
+      "fileMatch": ["config/deploy.rb"],
+      "matchStrings": [
+        "lock '(?<currentValue>\\d+\\.\\d+\\.\\d+)'",
+        "lock \"(~>\\s*)?(?<currentValue>\\d+\\.\\d+\\.\\d+)\"",
+      ],
+      "datasourceTemplate": "rubygems",
+      "depNameTemplate": "capistrano",
+      "extractVersionTemplate": "^(?<version>.+)$",
+    },
+  ],
 }
