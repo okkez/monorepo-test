@@ -33,7 +33,7 @@
       "matchManagers": ["bundler"],
     },
     {
-      "groupName": "bundler {{ parentDir }}",
+      "groupName": "bundler {{ packageFileDir }}",
       "matchPackageNames": ["capistrano"],
     },
   ]
