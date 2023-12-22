@@ -29,11 +29,11 @@
   ],
   "packageRules": [
     {
-      "groupName": "bundler",
+      "groupName": "bundler {{ parentDir }}",
       "matchManagers": ["bundler"],
     },
     {
-      "groupName": "bundler",
+      "groupName": "bundler {{ parentDir }}",
       "matchManagers": ["custom.regex"],
       "matchPackageNames": ["capistrano"],
       "matchFileNames": ["config/deploy.rb"],
