@@ -33,7 +33,7 @@
       "matchManagers": ["bundler"],
     },
     {
-      "groupName": "bundler {{ packageFileDir }}",
+      "groupName": "bundler {{{ replace '/config' '' packageFileDir }}}",
       "matchPackageNames": ["capistrano"],
     },
   ]
