@@ -34,6 +34,7 @@
     },
     {
       "groupName": "bundler {{ parentDir }}",
+      "matchManagers": ["custom.regex"],
       "matchPackageNames": ["capistrano"],
       "matchFileNames": ["config/deploy.rb"],
     },
