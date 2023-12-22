@@ -27,4 +27,17 @@
       "extractVersionTemplate": "^(?<version>.+)$",
     },
   ],
+  "packageRules": [
+    {
+      "groupName": "bundler {{ parentDir }}",
+      "additionalBranchPrefix": "{{ parentDir }}-",
+      "matchManagers": ["bundler"],
+    },
+    {
+      "groupName": "bundler {{ parentDir }}",
+      "additionalBranchPrefix": "{{ parentDir }}-",
+      "matchPackageNames": ["capistrano"],
+      "matchFileNames": ["config/deploy.rb"],
+    },
+  ]
 }
